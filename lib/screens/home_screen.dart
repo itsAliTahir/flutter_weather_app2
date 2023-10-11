@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_application_2/screens/home_screen_widgets/center_detail.dart';
+import '../variables.dart';
 import 'home_screen_widgets/top_appbar.dart';
 
 class MyHomeScreen extends StatefulWidget {
@@ -18,14 +19,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
       body: Container(
         width: screenWidth,
         height: screenHeight,
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-          Color.fromARGB(255, 125, 194, 250),
-          Color.fromARGB(255, 0, 78, 141)
-        ], stops: [
-          0.2,
-          1.0
-        ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: backgroundGradient[0].colors,
+                stops: backgroundGradient[0].ratio,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter)),
         child: Column(
           children: [
             Container(

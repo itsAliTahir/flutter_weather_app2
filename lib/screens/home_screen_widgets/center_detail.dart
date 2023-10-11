@@ -30,14 +30,15 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                 children: [
                   Container(
                     width: screenWidth * 0.75,
-                    height: screenHeight * 0.1,
+                    height: screenHeight * 0.05,
+                    // color: Colors.amber,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                            width: screenWidth * 0.1,
-                            height: screenHeight * 0.05,
+                            width: screenWidth * 0.10,
+                            height: screenHeight * 0.10,
                             child: const FittedBox(
                               child: Icon(
                                 Icons.wb_sunny_outlined,
@@ -45,7 +46,7 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                               ),
                             )),
                         SizedBox(
-                          width: screenWidth * 0.02,
+                          width: screenWidth * 0.05,
                         ),
                         Container(
                             width: screenWidth * 0.50,
@@ -54,10 +55,11 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                             child: const FittedBox(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
-                                  "Thunderstorm",
+                                  "Overcast",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontFamily: "Manrope",
+                                    fontFamily: "Valak",
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 )))
                       ],
@@ -83,7 +85,7 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                                   "21°",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontFamily: "Manrope",
+                                    fontFamily: "Valak",
                                   ),
                                 )),
                           ),
@@ -98,14 +100,14 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                                 Container(
                                   width: (screenWidth * 0.25) - 30,
                                   height: screenHeight * 0.05,
-                                  child: FittedBox(
+                                  child: const FittedBox(
                                       alignment: Alignment.centerLeft,
                                       child: Text(
                                         " 28° C ",
                                         style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: "Manrope",
-                                        ),
+                                            color: Colors.white,
+                                            fontFamily: "Valak",
+                                            fontWeight: FontWeight.bold),
                                       )),
                                 ),
                                 SizedBox(
@@ -116,16 +118,20 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                                     color: Colors.white,
                                   ),
                                 ),
+                                SizedBox(
+                                  height: screenHeight * 0.0006,
+                                ),
                                 Container(
                                   width: (screenWidth * 0.25) - 30,
                                   height: screenHeight * 0.05,
-                                  child: FittedBox(
+                                  child: const FittedBox(
                                       alignment: Alignment.centerLeft,
                                       child: Text(
                                         " 18° C ",
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontFamily: "Manrope",
+                                          fontFamily: "Valak",
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       )),
                                 )
@@ -140,10 +146,72 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
           ),
         ),
         Container(
-          width: screenWidth * 0.2,
-          height: screenHeight * 0.5,
-          // color: Colors.red,
-        ),
+            width: screenWidth * 0.2,
+            height: screenHeight * 0.5,
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Container(
+                          width: 30, height: 2, color: Colors.white60),
+                    ),
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Container(
+                        width: 2,
+                        height: (screenHeight * 0.5) - 64,
+                        color: Colors.white60,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 20),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        width: 30,
+                        height: 2,
+                        color: Colors.white60,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        left: 8.0,
+                        top: 0.25 * ((screenHeight * 0.5) - 94) + 22,
+                      ),
+                      child: Icon(
+                        Icons.wb_sunny,
+                        size: 30,
+                        color: Color.fromARGB(255, 255, 255, 132),
+                      ),
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.topCenter,
+                    child: Icon(
+                      Icons.single_bed,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Icon(
+                      Icons.single_bed,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            )),
       ],
     );
   }

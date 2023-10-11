@@ -80,6 +80,15 @@ flutter:
         - asset: assets/Font/Manrope-Regular.ttf
         - asset: assets/Font/Manrope-Bold.ttf
           weight: 500
+
+    - family: Linlegrey
+      fonts:
+        - asset: assets/Font/LinlegreyRegular-Oo3O.ttf
+
+    - family: Valak
+      fonts:
+        - asset: assets/Font/Valak-Light.otf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
