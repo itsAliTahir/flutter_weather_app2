@@ -73,7 +73,7 @@ class _MyTopAppBarState extends State<MyTopAppBar> {
                 child: Text(
                   "Sat, 7:30 PM",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(220, 255, 255, 255),
                       fontSize: screenHeight * 0.02,
                       fontFamily: "Manrope",
                       // fontWeight: FontWeight.bold

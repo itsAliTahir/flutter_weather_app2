@@ -41,7 +41,7 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                             height: screenHeight * 0.10,
                             child: const FittedBox(
                               child: Icon(
-                                Icons.wb_sunny_outlined,
+                                Icons.thunderstorm_outlined,
                                 color: Colors.white,
                               ),
                             )),
@@ -72,7 +72,7 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Container(
@@ -186,9 +186,9 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                     child: Padding(
                       padding: EdgeInsets.only(
                         left: 8.0,
-                        top: 0.25 * ((screenHeight * 0.5) - 94) + 22,
+                        top: 0.75 * ((screenHeight * 0.5) - 94) + 22,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.wb_sunny,
                         size: 30,
                         color: Color.fromARGB(255, 255, 255, 132),

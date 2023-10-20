@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 
-// gradient: LinearGradient(colors: [
-//           Color.fromARGB(255, 126, 26, 144),
-//           Color.fromARGB(255, 216, 76, 1)
-//         ], stops: [
-//           0.2,
-//           1.0
-//         ],
-// )
 class BackgroundGradient {
   List<Color> colors;
   List<double> ratio;
@@ -23,18 +15,19 @@ List<BackgroundGradient> backgroundGradient = [
     1.0
   ]),
   BackgroundGradient(colors: [
+    const Color.fromARGB(255, 255, 183, 50),
     const Color.fromARGB(255, 255, 215, 113),
     const Color.fromARGB(255, 255, 166, 0)
   ], ratio: [
-    0.2,
+    0.0,
+    0.25,
     1.0
   ]),
-  // [
-  //   const Color.fromARGB(255, 255, 215, 113),
-  //   const Color.fromARGB(255, 255, 166, 0)
-  // ],
-  // [
-  //   const Color.fromARGB(255, 197, 197, 197),
-  //   const Color.fromARGB(255, 105, 105, 105)
-  // ],
+  BackgroundGradient(colors: [
+    const Color.fromARGB(255, 188, 141, 184),
+    const Color.fromARGB(255, 93, 94, 144),
+  ], ratio: [
+    0.4,
+    1.0
+  ]),
 ];
