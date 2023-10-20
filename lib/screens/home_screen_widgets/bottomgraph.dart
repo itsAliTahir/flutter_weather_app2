@@ -6,6 +6,7 @@ class MyHomeGraph extends StatefulWidget {
 }
 
 class _MyHomeGraphState extends State<MyHomeGraph> {
+  List<double> dummyList = [0.6, 0.9, 1, 0.7, 0.88];
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -32,9 +33,23 @@ class _MyHomeGraphState extends State<MyHomeGraph> {
                 // color: Colors.orange,
                 child: Stack(
                   children: [
+                    if (i == 0)
+                      Positioned(
+                        left: ((screenWidth - 40) / 10) - 6,
+                        bottom: screenHeight * 0.0455 +
+                            (dummyList[i] * (screenHeight * 0.16)),
+                        child: Container(
+                          width: 12,
+                          height: 12,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(105, 255, 255, 255),
+                              borderRadius: BorderRadius.circular(45)),
+                        ),
+                      ),
                     Positioned(
                       left: ((screenWidth - 40) / 10) - 2.5,
-                      bottom: screenHeight * 0.05 + (1 * (screenHeight * 0.16)),
+                      bottom: screenHeight * 0.05 +
+                          (dummyList[i] * (screenHeight * 0.16)),
                       child: Container(
                         width: 5,
                         height: 5,
@@ -49,7 +64,7 @@ class _MyHomeGraphState extends State<MyHomeGraph> {
                           alignment: Alignment.bottomCenter,
                           child: Container(
                             width: 1,
-                            height: 1 * (screenHeight * 0.16),
+                            height: dummyList[i] * (screenHeight * 0.16),
                             color: Color.fromARGB(95, 255, 255, 255),
                           )),
                     ),
