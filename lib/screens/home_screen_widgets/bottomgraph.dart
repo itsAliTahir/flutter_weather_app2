@@ -20,28 +20,54 @@ class _MyHomeGraphState extends State<MyHomeGraph> {
             foregroundPainter: LinePainter(),
           ),
         ),
-        Positioned(
-            left: screenWidth * 0.25,
-            top: 20,
-            child: Hero(
-              tag: "one",
-              child: Container(
-                width: 5,
-                height: 5,
-                color: Colors.white,
-              ),
-            )),
-        Positioned(
-            right: 20,
-            top: 60,
-            child: Hero(
-              tag: "two",
-              child: Container(
-                width: 5,
-                height: 5,
-                color: Colors.white,
-              ),
-            )),
+        Row(
+          children: [
+            Container(
+              width: 40,
+            ),
+            for (int i = 0; i < 5; i++)
+              Container(
+                width: (screenWidth - 40) / 5,
+                height: screenHeight * 0.35,
+                // color: Colors.orange,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: ((screenWidth - 40) / 10) - 2.5,
+                      bottom: screenHeight * 0.05 + (1 * (screenHeight * 0.16)),
+                      child: Container(
+                        width: 5,
+                        height: 5,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(45)),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: screenHeight * 0.05),
+                      child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                            width: 1,
+                            height: 1 * (screenHeight * 0.16),
+                            color: Color.fromARGB(95, 255, 255, 255),
+                          )),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: screenHeight * 0.02),
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text(
+                          "Data",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+          ],
+        ),
       ],
     );
   }

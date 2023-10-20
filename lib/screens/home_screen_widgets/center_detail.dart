@@ -94,7 +94,7 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                             height: screenHeight * 0.2,
                             // color: Colors.black,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Container(
@@ -123,7 +123,7 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                                 ),
                                 Container(
                                   width: (screenWidth * 0.25) - 30,
-                                  height: screenHeight * 0.05,
+                                  height: screenHeight * 0.06,
                                   child: const FittedBox(
                                       alignment: Alignment.centerLeft,
                                       child: Text(
@@ -134,6 +134,9 @@ class _MyCenterDetailAppState extends State<MyCenterDetailApp> {
                                           fontWeight: FontWeight.bold,
                                         ),
                                       )),
+                                ),
+                                SizedBox(
+                                  height: screenHeight * 0.022,
                                 )
                               ],
                             ),

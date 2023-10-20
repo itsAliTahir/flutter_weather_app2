@@ -22,8 +22,8 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
         height: screenHeight,
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: backgroundGradient[2].colors,
-                stops: backgroundGradient[2].ratio,
+                colors: backgroundGradient[0].colors,
+                stops: backgroundGradient[0].ratio,
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         child: Column(
